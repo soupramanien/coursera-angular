@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Expressions and interpollations</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="msgApp">
+    <h1>Expressions and interpollations</h1>
+    <body ng-app="msgApp">
+    <div ng-controller="msgAppCtrl">
+      <div class="">
+        Message is : <br>
+        {{name}}<br>
+        Original : {{sayMsg();}}<br>
+        intelligent : {{sayIntelligentMsg();}}<br>
+        Truth : {{sayIntelligentMsg() | truth : "intelligent" : "smart"}}<br>
+        Big Truth : {{sayIntelligentMsg() | truth : "intelligent" : "smart" | uppercase}}<br>
+      </div>
+      <div class="">
+        <button type="button" name="button" ng-click="feedMani()">feed Mani</button>
+        cost of the cookie : {{cost | currency : '€' : 3}}
+        <img ng-src="images/mani_{{state}}.png" alt="">
+      </div>
+    </div>
+
+  </body>
+</html>

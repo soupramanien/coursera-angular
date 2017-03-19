@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Expressions and interpollations</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="counterApp">
+    <h1>Expressions and interpollations</h1>
+    <div ng-controller="counterCtrl">
+      <div class="">
+        <input type="text" name="" value="" ng-model="firstName">
+        <button type="button" name="button" ng-click="showNoOfWatchers()">log fullname</button>
+        <button type="button" name="button" ng-click="logFullName()">log fullname</button>
+    </div>
+
+    # of watchers : {{noWatchers}}
+    first name : {{firstName}}<br>
+    full name : {{::fullName}}
+
+  </body>
+</html>

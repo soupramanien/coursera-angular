@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>shopping List App</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-app="shoppingListApp">
+    <h1>shopping List : </h1>
+    <div ng-controller="shoppingListAddCtrl as itemAdder">
+      <div class="">
+        <!-- <ul>
+          <li ng-repeat="item in shoppingList1">{{item}}</li>
+        </ul> -->
+        <!-- <ul>
+          <li ng-repeat="item in shoppingList2"> Buy {{item.quantity}}
+            of {{item.name}}</li>
+        </ul> -->
+        <input type="text" name="" value="" ng-model="itemAdder.itemName" placeholder="Item name">
+        <input type="text" name="" value="" ng-model="itemAdder.itemQuantity" placeholder="Item Quantity">
+        <button type="button" name="button" ng-click="itemAdder.addItem()">add Item</button>
+    </div>
+    <div ng-controller="shoppingListShowCtrl as showList">
+      <div class="">
+        <input type="text" name="" value="" ng-model="search">
+        <ul>
+          <li ng-repeat="item in showList.items | filter : search"> {{$index + 1}}. Buy {{item.quantity}}
+            of {{item.name}}<button ng-click="showList.removeItem($index)" ></button></li> 
+        </ul>
+    </div>
+  </body>
+</html>
